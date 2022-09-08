@@ -1,6 +1,8 @@
 import { Provider } from "react-redux";
 import Counter from "./components/Counter";
 import store from "../src/redux/store";
+import HookCounter from "./components/HookCounter";
+import DynamicCounter from "./components/dynamicCounter";
 
 export default function App() {
   return (
@@ -11,7 +13,26 @@ export default function App() {
         </h1>
 
         <div className="max-w-md mx-auto mt-10 space-y-5">
-          <Counter />
+          <div>
+            <h3 className=" text-blue-400 text-xl font-semibold text-center py-5">
+              Old Method of Redux using "mapStateToProps" and
+              "mapDispatchToProps"
+            </h3>
+            <Counter />
+          </div>
+
+          <div>
+            <h3 className=" text-blue-400 text-xl font-semibold text-center py-5">
+              New Method of Redux using "useDispatch" and "useSelector"
+            </h3>
+            <HookCounter />
+          </div>
+          <div>
+            <h3 className=" text-blue-400 text-xl font-semibold text-center my-5">
+              Manage dynamic counting
+            </h3>
+            <DynamicCounter />
+          </div>
         </div>
       </div>
     </Provider>

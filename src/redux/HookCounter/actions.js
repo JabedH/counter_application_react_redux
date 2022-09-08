@@ -1,15 +1,16 @@
-import { DECREMENT, INCREMENT } from "../counter/actionTypes";
+import { HDECREMENT, HINCREMENT } from "./actionTypes";
+
 
 export const increment = () => {
   return {
-    type: INCREMENT,
+    type: HINCREMENT,
     
   };
 };
 
 export const decrement = () => {
   return {
-    type: DECREMENT,
+    type: HDECREMENT,
     
   };
 };
