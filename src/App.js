@@ -3,6 +3,7 @@ import Counter from "./components/Counter";
 import store from "../src/redux/store";
 import HookCounter from "./components/HookCounter";
 import DynamicCounter from "./components/dynamicCounter";
+import NewDynamicCounter from "./components/newDynamicCounter";
 
 export default function App() {
   return (
@@ -14,7 +15,7 @@ export default function App() {
 
         <div className="max-w-md mx-auto mt-10 space-y-5">
           <div>
-            <h3 className=" text-blue-400 text-xl font-semibold text-center py-5">
+            <h3 className=" text-red-400 text-xl font-semibold text-center py-5">
               Old Method of Redux using "mapStateToProps" and
               "mapDispatchToProps"
             </h3>
@@ -22,7 +23,7 @@ export default function App() {
           </div>
 
           <div>
-            <h3 className=" text-blue-400 text-xl font-semibold text-center py-5">
+            <h3 className=" text-gray-500 text-xl font-semibold text-center py-5">
               New Method of Redux using "useDispatch" and "useSelector"
             </h3>
             <HookCounter />
@@ -32,6 +33,8 @@ export default function App() {
               Manage dynamic counting
             </h3>
             <DynamicCounter />
+            <NewDynamicCounter />
+            <NewDynamicCounter dynamic />
           </div>
         </div>
       </div>
